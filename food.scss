@@ -1,0 +1,2483 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  scroll-behavior: smooth;
+}
+@import url("./swiper.css");
+
+@mixin green {
+  color: #27ae60;
+}
+@mixin black {
+  color: #192a56;
+}
+@mixin grey {
+  color: #666;
+}
+@mixin bg {
+  background-color: #27ae60;
+}
+
+.container {
+  .special-dish {
+    min-height: 34vw;
+    
+    .searchConatiner {
+      position: fixed;
+      top: -100vw;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.activeicon {
+        top: 0;
+      }
+       .background {
+        background-color: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      .fa-xmark {
+        font-size: 2vw;
+        color: white;
+        position: absolute;
+        top: 2vw;
+        right: 2vw;
+        cursor: pointer;
+      }
+      .inpContainer {
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+
+        input {
+          padding: 0.7vw 4vw;
+          outline: none;
+          z-index: 99;
+          background-color: transparent;
+          border: none;
+          border-bottom: 1px solid white;
+          font-size: 1.3vw;
+          color: white;
+        }
+        .fa-magnifying-glass{
+          font-size: 1.3vw;
+          color: #fff;
+          z-index: 99;
+        }
+      }
+    }
+    
+  
+    header {
+      background-color: #fff;
+      display: flex;
+      justify-content: space-around;
+      gap: 4vw;
+      padding: 0.8vw 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 99;
+      box-shadow: 0 6px 8px -6px #222;
+
+      .logo {
+        display: flex;
+
+        i {
+          @include green;
+          font-size: 2vw;
+        }
+        span {
+          font-size: 2vw;
+        }
+      }
+      .nav ul {
+        display: flex;
+        gap: 1.5vw;
+        list-style-type: none;
+
+        a {
+          text-transform: capitalize;
+          font-size: 1.5vw;
+          font-weight: 500;
+          @include grey;
+
+          
+
+          li {
+            padding: 0.4vw 0.9vw;
+            font-size: 1.3vw;
+
+            &.active {
+              background-color: #27ae60;
+              transition: 0.2s ease-in-out;
+              color: #fff;
+              border-radius: 0.3vw;
+            }
+          }
+
+          
+        }
+      }
+      .header-icons {
+        display: flex;
+        gap: 1vw;
+
+        .hamburger-icon {
+          display: none;
+          background-color: #eee;
+          border-radius: 50%;
+          width: 3vw;
+          height: 3vw;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .header-icon1,
+        .header-icon2,
+        .header-icon3 {
+          background-color: #eee;
+          border-radius: 50%;
+          width: 3vw;
+          height: 3vw;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:hover {
+            background-color: #27ae60;
+          }
+        }
+
+        i {
+          @include black;
+          font-size: 1.5vw;
+
+          &:hover {
+            color: #fff;
+            animation: 1s ease-in-out 1;
+            animation-name: icon;
+
+            @keyframes icon {
+              from {
+                transform: rotate(0deg);
+              }
+              to {
+                transform: rotate(360deg);
+              }
+            }
+          }
+        }
+      }
+      .hamburger-menu {
+        position: fixed;
+        top: 0;
+        right:-200vw;
+        height: 100%;
+        width: 30%;
+        background-color: rgba(41, 147, 112, 0.91);
+        transition: all 0.8s ease-in-out;
+        padding-top: 2vw;
+        display: none;
+
+       
+        ul {
+          list-style-type: none;
+          margin-left: 4vw;
+
+          i {
+            color: #fff;
+            margin-left: 30vw;
+            margin-top: 3vw;
+          }
+          a {
+            text-decoration: none;
+            z-index: 99;
+
+            li {
+              text-transform: capitalize;
+              color: #fff;
+              margin: 2vw 0;
+              font-size: 3vw;
+              transition: all 0.5s ease-in-out;
+
+              &:hover {
+                margin-left: 2vw;
+
+                color: #192a56;
+              }
+            }
+          }
+        }
+      }
+    }
+    .swiper {
+      margin-top: 6vw;
+      .swiper-wrapper {
+        .swiper-slide {
+          display: flex;
+          justify-content: center;
+          gap: 20vw;
+          align-items: center;
+          
+          .sec1-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5vw;
+            margin-top: 8vw;
+            span {
+              @include green;
+              font-size: 1.9vw;
+              text-transform: capitalize;
+            }
+            h1 {
+              color: #192a56;
+              text-transform: capitalize;
+              font-size: 3vw;
+            }
+            p {
+              color: #666;
+              font-size: 1.4vw;
+            }
+            button {
+              background-color: #192a56;
+              color: #fff;
+              padding: 0.5vw 0.8vw;
+              border: none;
+              font-size: 1.2vw;
+              text-transform: capitalize;
+              width: 8vw;
+              height: 3vw;
+              border-radius: 0.3vw;
+              margin-top: 0.7vw;
+              margin-left: 10vw;
+              text-align: center;
+             
+
+              &:hover {
+                background-color: #27ae60;
+                transform: scaleX(1.1);
+              }
+            }
+          }
+          .sec1-img img {
+            width: 30vw;
+            height: 30vw;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+  /*     second section start  */
+  .popular-dishes {
+    min-height: 46vw;
+    background: #eeeeff;
+
+    .sec2-container {
+      text-align: center;
+      padding: 2vw 0;
+
+      span {
+        color: #27ae60;
+        font-size: 1.5vw;
+        font-weight: 600;
+        text-transform: capitalize;
+      }
+      h2 {
+        margin-top: 1vw;
+        color: #192a56;
+        text-transform: uppercase;
+        font-size: 1.8vw;
+        font-weight: 600;
+      }
+      .sec2-boxs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-content: center;
+        gap: 4vw;
+        margin-left: 6vw;
+        margin-top: 2vw;
+
+        .sec2-box1 {
+          background-color: #fff;
+          width: 20vw;
+          height: 23vw;
+          padding: 1vw 0;
+
+          .sec2-icons {
+            display: flex;
+            justify-content: space-around;
+            gap: 4vw;
+            display: none;
+
+            :nth-child(1),
+            :nth-child(2) {
+              background-color: #eee;
+              border-radius: 50%;
+              width: 3vw;
+              height: 3vw;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              &:hover {
+                background-color: #27ae60;
+              }
+            }
+            i {
+              font-size: 1.5vw;
+
+              &:hover {
+                color: #fff;
+              }
+            }
+          }
+          .sec2-img {
+            .sec2-image {
+              width: 17vw;
+              height: 10vw;
+            }
+          }
+          .sec2-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1vw;
+
+            h4 {
+              color: #192a56;
+              font-size: 1.5vw;
+              text-transform: capitalize;
+            }
+            i {
+              font-size: 1.6vw;
+              color: #27ae60;
+            }
+            .sec2-btn {
+              span {
+                font-size: 1.3vw;
+                color: #27ae60;
+              }
+              button {
+                background-color: #192a56;
+                color: #fff;
+                padding: 0.2vw 0.6vw;
+                border: none;
+                border-radius: 0.3vw;
+                font-size: 1.2vw;
+                text-transform: capitalize;
+                width: 8vw;
+                height: 2.3vw;
+                margin-left: 1vw;
+
+                &:hover {
+                  background-color: #27ae60;
+                  transform: scaleX(1.1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  } /*   second section end     */
+  /*   thrid section start      */
+  .why-choose-us {
+    background-color: #fff;
+    min-height: 44vw;
+
+    .sec3-container {
+      text-align: center;
+      padding-top: 2vw;
+
+      span {
+        color: #27ae60;
+        font-size: 1.5vw;
+        font-weight: 600;
+        text-transform: capitalize;
+      }
+      h2 {
+        margin-top: 1vw;
+        color: #192a56;
+        text-transform: uppercase;
+        font-size: 1.8vw;
+        font-weight: 600;
+      }
+      .sec3-container2 {
+        display: flex;
+        justify-content: center;
+        gap: 4vw;
+
+        .sec3-img {
+          .sec3-image {
+            width: 35vw;
+            height: 30vw;
+          }
+        }
+        .sec3-text {
+          display: flex;
+          flex-direction: column;
+          gap: 1vw;
+          margin-top: 2vw;
+          h4 {
+            color: #192a56;
+            font-size: 1.8vw;
+            text-transform: capitalize;
+          }
+          p {
+            color: #666;
+            font-size: 1.4vw;
+          }
+          .sec3-btns {
+            display: flex;
+            gap: 2vw;
+
+            .sec3-btn1 {
+              background-color: #eee;
+              padding: 0.8vw 0.6vw;
+
+              i {
+                font-size: 1.5vw;
+                color: #27ae60;
+              }
+              span {
+                color: #666;
+                font-size: 1vw;
+                text-transform: capitalize;
+                margin-left: 0.3vw;
+              }
+            }
+          }
+          button {
+            background-color: #192a56;
+            color: #fff;
+            padding: 0.2vw 0.6vw;
+            border: none;
+            font-size: 1.2vw;
+            text-transform: capitalize;
+            width: 8vw;
+            height: 2.3vw;
+            border-radius: 0.3vw;
+
+            &:hover {
+              background-color: #27ae60;
+              transform: scaleX(1.1);
+            }
+          }
+        }
+      }
+    }
+  } /*   thrid section end    */
+  /*  fourth section start      */
+  .todays-speciality {
+    min-height: 48vw;
+    background-color: #eeeeff;
+    padding: 2vw 0;
+
+    .sec4-container {
+      .sec4-title {
+        text-align: center;
+        span {
+          color: #27ae60;
+          font-size: 1.5vw;
+          font-weight: 600;
+          text-transform: capitalize;
+        }
+        h2 {
+          margin-top: 1vw;
+          color: #192a56;
+          text-transform: uppercase;
+          font-size: 1.8vw;
+          font-weight: 600;
+        }
+      }
+
+      .sec4-boxs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2vw;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2vw;
+        margin-left: 5vw;
+
+        .sec4-box1 {
+          background-color: #fff;
+          width: 22vw;
+          height: 36vw;
+          padding: 1vw;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5vw;
+
+          .sec4-img {
+            .sec4-icon {
+              background-color: #fff;
+              border-radius: 50%;
+              width: 3vw;
+              height: 3vw;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: relative;
+              bottom: 19.5vw;
+              left: 16vw;
+
+              i {
+                font-size: 1.5vw;
+              }
+
+              &:hover {
+                background-color: #27ae60;
+                i {
+                  font-size: 1.5vw;
+                  color: white;
+                }
+              }
+            }
+
+            .sec4-image {
+              width: 20vw;
+              height: 20vw;
+              object-fit: cover;
+              border-radius: 0.3vw;
+            }
+          }
+          .sec4-icons {
+            font-size: 1.5vw;
+            color: #27ae60;
+          }
+          h4 {
+            color: #192a56;
+            text-transform: capitalize;
+            font-size: 1.6vw;
+            font-weight: 700;
+          }
+          p {
+            color: #666;
+            font-size: 1.3vw;
+          }
+          .sec4-btn {
+            display: flex;
+            gap: 2vw;
+
+            button {
+              background-color: #192a56;
+              color: #fff;
+              padding: 0.2vw 0.6vw;
+              border: none;
+              font-size: 1.2vw;
+              text-transform: capitalize;
+              width: 8vw;
+              height: 2.3vw;
+              border-radius: 0.3vw;
+
+              &:hover {
+                background-color: #27ae60;
+                transform: scaleX(1.1);
+              }
+            }
+            span {
+              font-size: 1.6vw;
+              color: #27ae60;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  } /*      fourth section end         */
+
+  /*    fifth section start        */
+  .what-they-say {
+    min-height: 40vw;
+    background-color: #fff;
+    padding: 2vw 0;
+
+    .sec5-container {
+      padding-top: 2vw;
+
+      .sec5-title {
+        text-align: center;
+
+        span {
+          color: #27ae60;
+          font-size: 1.5vw;
+          font-weight: 600;
+          text-transform: capitalize;
+        }
+        h2 {
+          margin-top: 1vw;
+          color: #192a56;
+          text-transform: uppercase;
+          font-size: 1.8vw;
+          font-weight: 600;
+        }
+      }
+      .sec5-boxs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7vw;
+        padding-top: 2vw;
+        .sec5-box1 {
+          background-color: #fff;
+          border: 2px solid #eee;
+          width: 25vw;
+          height: 22vw;
+          display: flex;
+          flex-direction: column;
+          border-radius: 0.5vw;
+          gap: 2vw;
+          padding: 1vw;
+
+          .sec5-img {
+            display: flex;
+            gap: 2vw;
+
+            .sec5-icons {
+              margin-top: 1.5vw;
+              span {
+                font-size: 1.6vw;
+                text-transform: capitalize;
+                color: #192a56;
+                font-weight: 500;
+              }
+              i {
+                font-size: 0.7vw;
+                color: #27ae60;
+              }
+            }
+          }
+          p {
+            font-size: 1.3vw;
+            color: #666;
+            line-height: 1.8vw;
+          }
+        }
+      }
+    }
+  } /*  fifth section end        */
+
+  /*    sixth section start          */
+  .free-and-fast {
+    background-color: #eeeeff;
+    min-height: 48vw;
+    padding: 2vw 0;
+
+    .sec6-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 2vw;
+
+      .sec6-title {
+        text-align: center;
+        span {
+          color: #27ae60;
+          font-size: 1.5vw;
+          font-weight: 600;
+          text-transform: capitalize;
+        }
+        h2 {
+          margin-top: 1vw;
+          color: #192a56;
+          text-transform: uppercase;
+          font-size: 1.8vw;
+          font-weight: 600;
+        }
+      }
+      .inputs {
+        background-color: #fff;
+        border-radius: 0.5vw;
+        display: flex;
+        justify-content: center;
+        padding-top: 2vw;
+
+        gap: 9vw;
+        width: 60vw;
+        height: 35vw;
+
+        .input1 {
+          display: flex;
+          flex-direction: column;
+          gap: 1vw;
+
+          label {
+            text-transform: capitalize;
+            font-size: 1.4vw;
+            color: #666;
+          }
+          input {
+            background-color: #eeeeff;
+            border: none;
+            border-radius: 0.1vw;
+            font-size: 1.3vw;
+            font-weight: 200;
+            width: 24vw;
+            height: 2.3vw;
+            padding: 0 1vw;
+            margin-top: 0.5vw;
+          }
+          textarea {
+            background-color: #eeeeff;
+            border: none;
+            border-radius: 0.1vw;
+            font-size: 1.3vw;
+            font-weight: 200;
+            padding: 0 1vw;
+            margin-top: 0.5vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*    RESPONSIVE             */
+
+/*      1024        */
+
+@media only screen and (max-width: 1024px) {
+
+  .container .special-dish .searchConatiner .background {
+  display: none;
+}
+  .container .special-dish header {
+    justify-content: center;
+    gap: 12vw;
+  }
+  .container .special-dish header .logo i {
+    font-size: 2.3vw;
+  }
+  .container .special-dish header .logo span {
+    font-size: 2.3vw;
+  }
+  .container .special-dish header .nav ul a li {
+    font-size: 1.7vw;
+  }
+  .container .special-dish header .header-icons .header-icon1,
+  .container .special-dish header .header-icons .header-icon2,
+  .container .special-dish header .header-icons .header-icon3 {
+    width: 3.5vw;
+    height: 3.5vw;
+  }
+  .container .special-dish header .header-icons i {
+    font-size: 1.7vw;
+  }
+  .container .special-dish .swiper .swiper-wrapper .swiper-slide .sec1-text  span {
+    font-size: 2vw;
+  }
+  .container .special-dish .swiper .swiper-wrapper .swiper-slide .sec1-text  h1 {
+    font-size: 2.6vw;
+  }
+  .container .special-dish .swiper .swiper-wrapper .swiper-slide .sec1-text p {
+    font-size: 1.7vw;
+  }
+  .container .special-dish .swiper .swiper-wrapper .swiper-slide .sec1-text button {
+    padding: 0.5vw 0.8vw;
+    font-size: 1.6vw;
+    width: 10vw;
+    height: 3vw;
+  }
+  .container .popular-dishes .sec2-container span {
+    font-size: 1.8vw;
+  }
+  .container .popular-dishes .sec2-container h2 {
+    font-size: 2.1vw;
+  }
+  .container .popular-dishes .sec2-container .sec2-boxs .sec2-box1 {
+    width: 23vw;
+    height: 27vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-icons
+    :nth-child(1),
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-icons
+    :nth-child(2) {
+    width: 3.5vw;
+    height: 3.5vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-icons
+    i {
+    font-size: 1.8vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-img
+    .sec2-image {
+    width: 19vw;
+    height: 12vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-text
+    h4 {
+    font-size: 1.7vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-text
+    i {
+    font-size: 1.7vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-text
+    .sec2-btn
+    span {
+    font-size: 1.6vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-text
+    .sec2-btn
+    button {
+    width: 9vw;
+    height: 2.5vw;
+    font-size: 1.4vw;
+  }
+  .container .why-choose-us .sec3-container span {
+    font-size: 1.8vw;
+  }
+  .container .why-choose-us .sec3-container h2 {
+    font-size: 2.1vw;
+  }
+  .container .why-choose-us .sec3-container .sec3-container2 .sec3-text h4 {
+    font-size: 2.1vw;
+  }
+  .container .why-choose-us .sec3-container .sec3-container2 .sec3-text p {
+    font-size: 1.6vw;
+  }
+
+  .container
+    .why-choose-us
+    .sec3-container
+    .sec3-container2
+    .sec3-text
+    .sec3-btns
+    .sec3-btn1
+    i {
+    font-size: 1.8vw;
+  }
+  .container
+    .why-choose-us
+    .sec3-container
+    .sec3-container2
+    .sec3-text
+    .sec3-btns
+    .sec3-btn1
+    span {
+    font-size: 1.3vw;
+  }
+  .container .why-choose-us .sec3-container .sec3-container2 .sec3-text button {
+    width: 9vw;
+    height: 2.6vw;
+    font-size: 1.5vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-title span {
+    font-size: 1.8vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-title h2 {
+    font-size: 2.1vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-boxs .sec4-box1 {
+    width: 28vw;
+    height: 42vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-img
+    .sec4-image {
+    width: 26vw;
+    height: 22vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-img
+    .sec4-icon {
+    width: 3.5vw;
+    height: 3.5vw;
+    bottom: 21vw;
+    left: 21vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-img
+    .sec4-icon
+    i {
+    font-size: 1.8vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-icons {
+    font-size: 1.7vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-boxs .sec4-box1 h4 {
+    font-size: 1.9vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-boxs .sec4-box1 p {
+    font-size: 1.7vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-btn
+    button {
+    width: 12vw;
+    height: 2.5vw;
+    font-size: 1.5vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-btn
+    span {
+    font-size: 1.9vw;
+  }
+  .container .what-they-say .sec5-container .sec5-title span {
+    font-size: 1.8vw;
+  }
+  .container .what-they-say .sec5-container .sec5-title h2 {
+    font-size: 2.1vw;
+  }
+  .container .what-they-say .sec5-container .sec5-boxs .sec5-box1 {
+    width: 25vw;
+    height: 27vw;
+  }
+
+  .container
+    .what-they-say
+    .sec5-container
+    .sec5-boxs
+    .sec5-box1
+    .sec5-img
+    .sec5-icons
+    span {
+    font-size: 2vw;
+  }
+  .container
+    .what-they-say
+    .sec5-container
+    .sec5-boxs
+    .sec5-box1
+    .sec5-img
+    .sec5-icons
+    i {
+    font-size: 1vw;
+  }
+  .container .what-they-say .sec5-container .sec5-boxs .sec5-box1 p {
+    font-size: 1.6vw;
+    color: #666;
+    line-height: 1.8vw;
+  }
+  .container .free-and-fast .sec6-container .sec6-title span {
+    font-size: 1.8vw;
+  }
+  .container .free-and-fast .sec6-container .sec6-title h2 {
+    font-size: 2.1vw;
+  }
+  .container .free-and-fast .sec6-container .inputs .input1 label {
+    font-size: 1.6vw;
+  }
+  .container .free-and-fast .sec6-container .inputs .input1 input {
+    width: 24vw;
+    height: 2.5vw;
+    padding: 0 1vw;
+    font-size: 1.4vw;
+  }
+  .container .free-and-fast .sec6-container .inputs .input1 textarea {
+    font-size: 1.4vw;
+  }
+  .container .free-and-fast .sec6-container .inputs {
+    width: 65vw;
+    height: 35vw;
+  }
+}
+
+/*      912      */
+
+@media only screen and (max-width: 912px) {
+  .container .special-dish header {
+    gap: 9vw;
+  }
+  .container .special-dish header .logo i {
+    font-size: 2.5vw;
+  }
+  .container .special-dish header .logo span {
+    font-size: 2.5vw;
+  }
+  .container .special-dish header .nav ul a li {
+    font-size: 1.9vw;
+    font-weight: 500;
+  }
+  .container .special-dish header .header-icons .header-icon1,
+  .container .special-dish header .header-icons .header-icon2,
+  .container .special-dish header .header-icons .header-icon3 {
+    width: 4.2vw;
+    height: 4.2vw;
+  }
+  .container .special-dish header .header-icons .header-icon1,
+  .container .special-dish header .header-icons .hamburger-icon {
+    width: 4.3vw;
+    height: 4.3vw;
+  }
+  .container .special-dish header .header-icons i {
+    font-size: 1.9vw;
+  }
+  .container .special-dish .swiper .swiper-wrapper .swiper-slide .sec1-text span {
+    font-size: 2.4vw;
+  }
+  .container .special-dish .swiper .swiper-wrapper .swiper-slide .sec1-text h1 {
+    font-size: 2.9vw;
+  }
+  .container .special-dish .swiper .swiper-wrapper .swiper-slide .sec1-text p {
+    font-size: 2vw;
+  }
+
+  .container .special-dish .swiper .swiper-wrapper .swiper-slide .sec1-text button {
+    font-size: 1.9vw;
+    width: 12vw;
+  }
+  .container .special-dish .swiper .swiper-wrapper .swiper-slide {
+    gap: 11vw;
+  }
+
+  .container .popular-dishes .sec2-container span {
+    font-size: 2.1vw;
+  }
+  .container .popular-dishes .sec2-container h2 {
+    font-size: 2.4vw;
+  }
+  .container .popular-dishes .sec2-container .sec2-boxs .sec2-box1 {
+    width: 27vw;
+    height: 31vw;
+  }
+  .container .popular-dishes .sec2-container .sec2-boxs {
+    margin-left: 2vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-icons
+    :nth-child(1),
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-icons
+    :nth-child(2) {
+    width: 3.8vw;
+    height: 3.8vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-icons
+    i {
+    font-size: 2.1vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-img
+    .sec2-image {
+    width: 22vw;
+    height: 15vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-text
+    h4 {
+    font-size: 1.9vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-text
+    i {
+    font-size: 1.8vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-text
+    .sec2-btn
+    span {
+    font-size: 2vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-text
+    .sec2-btn
+    button {
+    width: 12vw;
+    height: 2.6vw;
+    font-size: 1.7vw;
+  }
+  .container .why-choose-us .sec3-container span {
+    font-size: 2.1vw;
+  }
+  .container .why-choose-us .sec3-container h2 {
+    font-size: 2.4vw;
+  }
+  .container .why-choose-us .sec3-container .sec3-container2 .sec3-text h4 {
+    font-size: 2.4vw;
+  }
+  .container .why-choose-us .sec3-container .sec3-container2 .sec3-text p {
+    font-size: 1.9vw;
+  }
+  .container .why-choose-us .sec3-container .sec3-container2 {
+    flex-direction: column;
+    gap: 0;
+  }
+  .container .why-choose-us .sec3-container .sec3-container2 .sec3-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    margin-top: 0;
+  }
+
+  .container
+    .why-choose-us
+    .sec3-container
+    .sec3-container2
+    .sec3-text
+    .sec3-btns
+    .sec3-btn1
+    i {
+    font-size: 2vw;
+  }
+  .container
+    .why-choose-us
+    .sec3-container
+    .sec3-container2
+    .sec3-text
+    .sec3-btns
+    .sec3-btn1
+    span {
+    font-size: 1.5vw;
+  }
+  .container .why-choose-us .sec3-container .sec3-container2 .sec3-text button {
+    width: 11vw;
+    height: 2.6vw;
+    font-size: 1.7vw;
+  }
+  .container .why-choose-us {
+    padding-bottom: 4vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-title span {
+    font-size: 2.1vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-title h2 {
+    font-size: 2.4vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-boxs .sec4-box1 {
+    width: 30vw;
+    height: 45vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-img
+    .sec4-image {
+    width: 28vw;
+    height: 23vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-img
+    .sec4-icon {
+    width: 3.8vw;
+    height: 3.8vw;
+    bottom: 22vw;
+    left: 22vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-img
+    .sec4-icon
+    i {
+    font-size: 1.9vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-icons {
+    font-size: 1.8vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-boxs .sec4-box1 h4 {
+    font-size: 2vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-boxs .sec4-box1 p {
+    font-size: 1.9vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-btn
+    button {
+    font-size: 1.7vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-btn
+    span {
+    font-size: 2.1vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-boxs {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+
+    gap: 4vw;
+    margin-left: 11vw;
+  }
+  .container .what-they-say .sec5-container .sec5-title span {
+    font-size: 2.1vw;
+  }
+  .container .what-they-say .sec5-container .sec5-title h2 {
+    font-size: 2.4vw;
+  }
+  .container .what-they-say .sec5-container .sec5-boxs .sec5-box1 {
+    width: 28vw;
+    height: 30vw;
+  }
+
+  .container
+    .what-they-say
+    .sec5-container
+    .sec5-boxs
+    .sec5-box1
+    .sec5-img
+    .sec5-icons
+    span {
+    font-size: 2.3vw;
+  }
+  .container
+    .what-they-say
+    .sec5-container
+    .sec5-boxs
+    .sec5-box1
+    .sec5-img
+    .sec5-icons
+    i {
+    font-size: 1.2vw;
+  }
+  .container .what-they-say .sec5-container .sec5-boxs .sec5-box1 p {
+    font-size: 1.8vw;
+  }
+  .container .what-they-say .sec5-container .sec5-boxs {
+    gap: 4vw;
+  }
+  .container .free-and-fast .sec6-container .sec6-title span {
+    font-size: 2.1vw;
+  }
+  .container .free-and-fast .sec6-container .sec6-title h2 {
+    font-size: 2.4vw;
+  }
+  .container .free-and-fast .sec6-container .inputs .input1 label {
+    font-size: 1.7vw;
+  }
+  .container .free-and-fast .sec6-container .inputs .input1 input {
+    width: 26vw;
+    height: 2.6vw;
+    padding: 0 1vw;
+    font-size: 1.5vw;
+  }
+  .container .free-and-fast .sec6-container .inputs .input1 textarea {
+    font-size: 1.5vw;
+  }
+  .container .free-and-fast .sec6-container .inputs {
+    width: 65vw;
+    height: 38vw;
+  }
+}
+
+/*      768     */
+
+@media only screen and (max-width: 768px) {
+  .container .special-dish {
+    min-height: 42vw;
+  }
+  .container .special-dish .sec1-container {
+    padding-top: 5vw;
+  }
+  .container .special-dish header {
+    gap: 8vw;
+  }
+  .container .special-dish header .logo i {
+    font-size: 3.2vw;
+  }
+  .container .special-dish header .logo span {
+    font-size: 3.2vw;
+  }
+  .container .special-dish header .nav ul a li {
+    font-size: 2.2vw;
+    font-weight: 500;
+  }
+  .container .special-dish header .header-icons .header-icon1,
+  .container .special-dish header .header-icons .header-icon2,
+  .container .special-dish header .header-icons .header-icon3 {
+    width: 4.1vw;
+    height: 4.1vw;
+  }
+  .container .special-dish header .header-icons i {
+    font-size: 2.4vw;
+  }
+  .container .special-dish .swiper .swiper-wrapper .swiper-slide .sec1-text span {
+    font-size: 2.7vw;
+  }
+  .container .special-dish .swiper .swiper-wrapper .swiper-slide .sec1-textt h1 {
+    font-size: 3vw;
+  }
+  .container .special-dish .swiper .swiper-wrapper .swiper-slide .sec1-text p {
+    font-size: 2.2vw;
+  }
+
+  .container .special-dish .swiper .swiper-wrapper .swiper-slide .sec1-text button {
+    font-size: 2.1vw;
+    width: 13vw;
+    height: 4vw;
+  }
+
+  .container .popular-dishes .sec2-container span {
+    font-size: 2.5vw;
+  }
+  .container .popular-dishes .sec2-container h2 {
+    font-size: 2.7vw;
+  }
+  .container .popular-dishes .sec2-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .container .popular-dishes .sec2-container .sec2-boxs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4vw;
+    margin-left: 6vw;
+  }
+  .container .popular-dishes .sec2-container .sec2-boxs .sec2-box1 {
+    width: 33vw;
+    height: 40vw;
+  }
+
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-icons
+    :nth-child(1),
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-icons
+    :nth-child(2) {
+    width: 4.1vw;
+    height: 4.1vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-icons
+    i {
+    font-size: 2.4vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-img
+    .sec2-image {
+    width: 25vw;
+    height: 18vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-text
+    h4 {
+    font-size: 2.1vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-text
+    i {
+    font-size: 1.9vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-text
+    .sec2-btn
+    span {
+    font-size: 2.4vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-text
+    .sec2-btn
+    button {
+    width: 12vw;
+    height: 3vw;
+    font-size: 1.9vw;
+  }
+  .container .why-choose-us .sec3-container span {
+    font-size: 2.5vw;
+  }
+  .container .why-choose-us .sec3-container h2 {
+    font-size: 2.7vw;
+  }
+  .container .why-choose-us .sec3-container .sec3-container2 .sec3-text h4 {
+    font-size: 2.6vw;
+  }
+  .container .why-choose-us .sec3-container .sec3-container2 .sec3-text p {
+    font-size: 2.2vw;
+  }
+
+  .container .why-choose-us .sec3-container .sec3-container2 .sec3-text {
+    gap: 1.2vw;
+  }
+
+  .container
+    .why-choose-us
+    .sec3-container
+    .sec3-container2
+    .sec3-text
+    .sec3-btns
+    .sec3-btn1
+    i {
+    font-size: 2.5vw;
+  }
+  .container
+    .why-choose-us
+    .sec3-container
+    .sec3-container2
+    .sec3-text
+    .sec3-btns
+    .sec3-btn1
+    span {
+    font-size: 1.8vw;
+  }
+  .container .why-choose-us .sec3-container .sec3-container2 .sec3-text button {
+    width: 12vw;
+    height: 3.4vw;
+    font-size: 1.9vw;
+  }
+
+  .container .todays-speciality .sec4-container .sec4-title span {
+    font-size: 2.5vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-title h2 {
+    font-size: 2.7vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-boxs .sec4-box1 {
+    width: 37vw;
+    height: 48vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-img
+    .sec4-image {
+    width: 35vw;
+    height: 25vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-img
+    .sec4-icon {
+    width: 4.3vw;
+    height: 4.3vw;
+    bottom: 23vw;
+    left: 28vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-img
+    .sec4-icon
+    i {
+    font-size: 2.3vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-icons {
+    font-size: 2vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-boxs .sec4-box1 h4 {
+    font-size: 2.5vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-boxs .sec4-box1 p {
+    font-size: 2.1vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-btn
+    button {
+    font-size: 1.9vw;
+    height: 3.5vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-btn
+    span {
+    font-size: 2.5vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-boxs {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+
+    gap: 4vw;
+    margin-left: 11vw;
+  }
+  .container .what-they-say .sec5-container .sec5-title span {
+    font-size: 2.5vw;
+  }
+  .container .what-they-say .sec5-container .sec5-title h2 {
+    font-size: 2.7vw;
+  }
+  .container .what-they-say .sec5-container .sec5-boxs .sec5-box1 {
+    width: 28vw;
+    height: 30vw;
+  }
+
+  .container
+    .what-they-say
+    .sec5-container
+    .sec5-boxs
+    .sec5-box1
+    .sec5-img
+    .sec5-icons
+    span {
+    font-size: 2.5vw;
+  }
+  .container
+    .what-they-say
+    .sec5-container
+    .sec5-boxs
+    .sec5-box1
+    .sec5-img
+    .sec5-icons
+    i {
+    font-size: 1.3vw;
+  }
+  .container .what-they-say .sec5-container .sec5-boxs .sec5-box1 p {
+    font-size: 2vw;
+  }
+
+  .container .free-and-fast .sec6-container .sec6-title span {
+    font-size: 2.5vw;
+  }
+  .container .free-and-fast .sec6-container .sec6-title h2 {
+    font-size: 2.7vw;
+  }
+  .container .free-and-fast .sec6-container .inputs .input1 label {
+    font-size: 1.8vw;
+  }
+  .container .free-and-fast .sec6-container .inputs .input1 input {
+    font-size: 1.6vw;
+  }
+  .container .free-and-fast .sec6-container .inputs .input1 textarea {
+    font-size: 1.6vw;
+  }
+  .container .free-and-fast .sec6-container .inputs {
+    width: 68vw;
+    height: 41vw;
+  }
+}
+
+/*      540      */
+
+@media only screen and (max-width: 540px) {
+  .container .special-dish header .nav {
+    display: none;
+  }
+  .container .special-dish header .header-icons .header-icon1,
+  .container .special-dish header .header-icons .header-icon2,
+  .container .special-dish header .header-icons .hamburger-icon {
+    display: block;
+  }
+  .container .special-dish header .hamburger-menu {
+    right: 0;
+    width: 40%;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .special-dish header {
+    justify-content: space-around;
+    gap: 15vw;
+    padding-top: 2vw;
+  }
+  .container .special-dish header .logo i {
+    font-size: 4.5vw;
+  }
+  .container .special-dish header .logo span {
+    font-size: 4.5vw;
+  }
+  .container .special-dish header .header-icons {
+    gap: 3vw;
+  }
+  .container .special-dish header .header-icons .header-icon1,
+  .container .special-dish header .header-icons .header-icon2,
+  .container .special-dish header .header-icons .header-icon3 {
+    width: 5vw;
+    height: 5vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+  .container .special-dish header .header-icons .header-icon1,
+  .container .special-dish header .header-icons .hamburger-icon {
+    width: 5vw;
+    height: 5vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+  .container .special-dish header .header-icons i {
+    font-size: 3vw;
+  }
+  .container .special-dish .sec1-container .sec1-part1 .sec1-img img {
+    width: 55vw;
+    height: 55vw;
+    position: relative;
+    bottom: 6vw;
+  }
+  .container .special-dish .sec1-container .sec1-part1 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .special-dish .swiper  .swiper-wrapper .swiper-slide .sec1-text {
+    margin-top: 4vw;
+  }
+
+  .container .special-dish .swiper .swiper-wrapper .swiper-slide .sec1-text span {
+    font-size: 3.7vw;
+  }
+  .container .special-dish .swiper .swiper-wrapper .swiper-slide .sec1-text h1 {
+    font-size: 5.5vw;
+  }
+  .container .special-dish .swiper .swiper-wrapper .swiper-slide .sec1-text p {
+    font-size: 3.4vw;
+  }
+
+  .container .special-dish .swiper .swiper-wrapper .swiper-slide .sec1-text button {
+    font-size: 2.8vw;
+    width: 20vw;
+    height: 5.7vw;
+  }
+  .container .special-dish .swiper .swiper-wrapper .swiper-slide  {
+    gap: 12vw;
+  }
+
+  .container .popular-dishes .sec2-container span {
+    font-size: 3.3vw;
+  }
+  .container .popular-dishes .sec2-container h2 {
+    font-size: 4vw;
+  }
+  .container .popular-dishes .sec2-container .sec2-boxs .sec2-box1 {
+    width: 50vw;
+    height: 65vw;
+  }
+  .container .popular-dishes .sec2-container .sec2-boxs {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-icons
+    :nth-child(1),
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-icons
+    :nth-child(2) {
+    width: 6.5vw;
+    height: 6.5vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-icons
+    i {
+    font-size: 3.5vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-img
+    .sec2-image {
+    width: 40vw;
+    height: 30vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-text
+    h4 {
+    font-size: 3.7vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-text
+    i {
+    font-size: 2.5vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-text
+    .sec2-btn
+    span {
+    font-size: 3.5vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-text
+    .sec2-btn
+    button {
+    width: 18vw;
+    height: 5vw;
+    font-size: 2.8vw;
+  }
+  .container .popular-dishes .sec2-container .sec2-boxs .sec2-box1 .sec2-text {
+    padding-top: 2vw;
+  }
+  .container .why-choose-us .sec3-container span {
+    font-size: 3.8vw;
+  }
+  .container .why-choose-us .sec3-container h2 {
+    font-size: 4vw;
+  }
+  .container
+    .why-choose-us
+    .sec3-container
+    .sec3-container2
+    .sec3-img
+    .sec3-image {
+    width: 45vw;
+    height: 40vw;
+    margin-top: 2vw;
+  }
+  .container .why-choose-us .sec3-container .sec3-container2 .sec3-text h4 {
+    font-size: 4vw;
+  }
+  .container
+    .why-choose-us
+    .sec3-container
+    .sec3-container2
+    .sec3-text
+    .sec3-btns
+    .sec3-btn1 {
+    padding: 1vw;
+  }
+  .container .why-choose-us .sec3-container .sec3-container2 .sec3-text p {
+    font-size: 2.6vw;
+  }
+
+  .container
+    .why-choose-us
+    .sec3-container
+    .sec3-container2
+    .sec3-text
+    .sec3-btns
+    .sec3-btn1
+    i {
+    font-size: 3.5vw;
+  }
+  .container
+    .why-choose-us
+    .sec3-container
+    .sec3-container2
+    .sec3-text
+    .sec3-btns
+    .sec3-btn1
+    span {
+    font-size: 2.4vw;
+  }
+  .container .why-choose-us .sec3-container .sec3-container2 .sec3-text button {
+    width: 18vw;
+    height: 5vw;
+    font-size: 2.8vw;
+  }
+  .container .why-choose-us {
+    padding-bottom: 4vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-title span {
+    font-size: 3.5vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-title h2 {
+    font-size: 4vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-boxs .sec4-box1 {
+    width: 50vw;
+    height: 70vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-img
+    .sec4-image {
+    width: 48vw;
+    height: 43vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-img
+    .sec4-icon {
+    display: none;
+  }
+
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-icons {
+    font-size: 2.5vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-boxs .sec4-box1 h4 {
+    font-size: 3.5vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-boxs .sec4-box1 p {
+    font-size: 2.9vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-btn
+    button {
+    font-size: 2.6vw;
+    width: 16vw;
+    height: 5vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-btn
+    span {
+    font-size: 3.1vw;
+  }
+  .container .todays-speciality .sec4-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .todays-speciality .sec4-container .sec4-boxs {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    margin-left: 0;
+    gap: 4vw;
+    align-items: center;
+  }
+  .container .what-they-say {
+    min-height: 50vw;
+  }
+  .container .what-they-say .sec5-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container .what-they-say .sec5-container .sec5-title span {
+    font-size: 3.3vw;
+  }
+  .container .what-they-say .sec5-container .sec5-title h2 {
+    font-size: 4vw;
+  }
+  .container .what-they-say .sec5-container .sec5-boxs {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5vw;
+  }
+  .container .what-they-say .sec5-container .sec5-boxs .sec5-box1 {
+    width: 47vw;
+    height: 50vw;
+  }
+
+  .container
+    .what-they-say
+    .sec5-container
+    .sec5-boxs
+    .sec5-box1
+    .sec5-img
+    .sec5-icons
+    span {
+    font-size: 4vw;
+  }
+  .container
+    .what-they-say
+    .sec5-container
+    .sec5-boxs
+    .sec5-box1
+    .sec5-img
+    .sec5-icons
+    i {
+    font-size: 2vw;
+  }
+  .container .what-they-say .sec5-container .sec5-boxs .sec5-box1 {
+    gap: 4vw;
+  }
+  .container .what-they-say .sec5-container .sec5-boxs .sec5-box1 p {
+    font-size: 3vw;
+    line-height: 3vw;
+  }
+  .container .what-they-say .sec5-container .sec5-boxs {
+    gap: 4vw;
+  }
+  .container .free-and-fast .sec6-container {
+    min-height: 50vw;
+  }
+  .container .free-and-fast .sec6-container .sec6-title span {
+    font-size: 3.5vw;
+  }
+  .container .free-and-fast .sec6-container .sec6-title h2 {
+    font-size: 4vw;
+  }
+  .container .free-and-fast .sec6-container .inputs .input1 label {
+    font-size: 2.5vw;
+  }
+  .container .free-and-fast .sec6-container .inputs .input1 input {
+    width: 30vw;
+    height: 5vw;
+    padding: 0 1vw;
+    font-size: 2.2vw;
+  }
+  .container .free-and-fast .sec6-container .inputs .input1 textarea {
+    font-size: 2.2vw;
+    width: 30vw;
+    height: 12vw;
+  }
+  .container .free-and-fast .sec6-container .inputs {
+    width: 75vw;
+    height: 50vw;
+  }
+}
+
+/*      414     */
+
+@media only screen and (max-width: 414px) {
+  .container .special-dish header .hamburger-menu {
+    width: 45%;
+  }
+  .container .special-dish header .hamburger-menu ul a li {
+    font-size: 3.8vw;
+  }
+  .container .special-dish header {
+    gap: 12vw;
+    padding-top: 4vw;
+  }
+  .container .special-dish header .logo i {
+    font-size: 5.5vw;
+  }
+  .container .special-dish header .logo span {
+    font-size: 5.5vw;
+  }
+  .container .special-dish header .header-icons {
+    gap: 3vw;
+  }
+  .container .special-dish header .header-icons .header-icon1,
+  .container .special-dish header .header-icons .header-icon2,
+  .container .special-dish header .header-icons .header-icon3 {
+    width: 7vw;
+    height: 7vw;
+  }
+  .container .special-dish header .header-icons .header-icon1,
+  .container .special-dish header .header-icons .hamburger-icon {
+    width: 7vw;
+    height: 7vw;
+  }
+  .container .special-dish header .header-icons i {
+    font-size: 4vw;
+  }
+
+  .container .special-dish .sec1-container .sec1-part1 .sec1-text {
+    margin-top: 8vw;
+    margin-left: 9vw;
+  }
+
+  .container .special-dish .swiper .swiper-wrapper .swiper-slide .sec1-text span {
+    font-size: 4.6vw;
+  }
+  .container .special-dish .swiper .swiper-wrapper .swiper-slide .sec1-text h1 {
+    font-size: 5.8vw;
+  }
+  .container .special-dish .swiper .swiper-wrapper .swiper-slide .sec1-text p {
+    font-size: 4.2vw;
+  }
+
+  .container .special-dish .swiper .swiper-wrapper .swiper-slide .sec1-textt button {
+    font-size: 3.5vw;
+    width: 23vw;
+    height: 6.8vw;
+  }
+  .container .special-dish .swiper .swiper-wrapper .swiper-slide {
+    gap: 12vw;
+  }
+
+  .container .popular-dishes .sec2-container span {
+    font-size: 4vw;
+  }
+  .container .popular-dishes .sec2-container h2 {
+    font-size: 4.3vw;
+  }
+  .container .popular-dishes .sec2-container .sec2-boxs .sec2-box1 {
+    width: 55vw;
+    height: 70vw;
+  }
+
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-icons
+    :nth-child(1),
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-icons
+    :nth-child(2) {
+    width: 7vw;
+    height: 7vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-icons
+    i {
+    font-size: 4vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-img
+    .sec2-image {
+    width: 45vw;
+    height: 35vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-text
+    h4 {
+    font-size: 4.3vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-text
+    i {
+    font-size: 2.9vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-text
+    .sec2-btn
+    span {
+    font-size: 3.9vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-text
+    .sec2-btn
+    button {
+    width: 21vw;
+    height: 6vw;
+    font-size: 3.5vw;
+  }
+  .container
+    .popular-dishes
+    .sec2-container
+    .sec2-boxs
+    .sec2-box1
+    .sec2-text
+    .sec2-btn {
+    padding-top: 1.5vw;
+  }
+
+  .container .why-choose-us .sec3-container span {
+    font-size: 4vw;
+  }
+  .container .why-choose-us .sec3-container h2 {
+    font-size: 4.3vw;
+  }
+  .container
+    .why-choose-us
+    .sec3-container
+    .sec3-container2
+    .sec3-img
+    .sec3-image {
+    width: 47vw;
+    height: 42vw;
+  }
+  .container .why-choose-us .sec3-container .sec3-container2 .sec3-text h4 {
+    font-size: 4.5vw;
+  }
+  .container
+    .why-choose-us
+    .sec3-container
+    .sec3-container2
+    .sec3-text
+    .sec3-btns
+    .sec3-btn1 {
+    padding: 2vw;
+  }
+  .container .why-choose-us .sec3-container .sec3-container2 .sec3-text p {
+    font-size: 3.6vw;
+  }
+  .container
+    .why-choose-us
+    .sec3-container
+    .sec3-container2
+    .sec3-text
+    .sec3-btns
+    .sec3-btn1 {
+    width: 29vw;
+    height: 8vw;
+  }
+
+  .container
+    .why-choose-us
+    .sec3-container
+    .sec3-container2
+    .sec3-text
+    .sec3-btns
+    .sec3-btn1
+    i {
+    font-size: 4vw;
+  }
+  .container
+    .why-choose-us
+    .sec3-container
+    .sec3-container2
+    .sec3-text
+    .sec3-btns
+    .sec3-btn1
+    span {
+    font-size: 2.8vw;
+  }
+
+  .container .why-choose-us .sec3-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .why-choose-us .sec3-container .sec3-container2 .sec3-text {
+    width: 60vw;
+  }
+  .container .why-choose-us .sec3-container .sec3-container2 .sec3-text button {
+    width: 23vw;
+    height: 7vw;
+    font-size: 3.8vw;
+    margin-top: 1vw;
+  }
+  .container .todays-speciality {
+    padding-bottom: 6vw;
+  }
+
+  .container .todays-speciality .sec4-container .sec4-title span {
+    font-size: 4vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-title h2 {
+    font-size: 4.3vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-boxs .sec4-box1 {
+    width: 57vw;
+    height: 85vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-img
+    .sec4-image {
+    width: 55vw;
+    height: 46vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-img
+    .sec4-icon {
+    display: none;
+  }
+
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-icons {
+    font-size: 3vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-boxs .sec4-box1 h4 {
+    font-size: 5vw;
+  }
+  .container .todays-speciality .sec4-container .sec4-boxs .sec4-box1 p {
+    font-size: 3.8vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-btn
+    button {
+    font-size: 3.6vw;
+    width: 20vw;
+    height: 6vw;
+  }
+  .container
+    .todays-speciality
+    .sec4-container
+    .sec4-boxs
+    .sec4-box1
+    .sec4-btn
+    span {
+    font-size: 4vw;
+  }
+
+  .container .todays-speciality .sec4-container .sec4-boxs {
+    gap: 5vw;
+  }
+  .container .what-they-say {
+    min-height: 50vw;
+  }
+
+  .container .what-they-say .sec5-container .sec5-title span {
+    font-size: 4vw;
+  }
+  .container .what-they-say .sec5-container .sec5-title h2 {
+    font-size: 4.3vw;
+  }
+
+  .container .what-they-say .sec5-container .sec5-boxs .sec5-box1 {
+    width: 55vw;
+    height: 60vw;
+  }
+
+  .container
+    .what-they-say
+    .sec5-container
+    .sec5-boxs
+    .sec5-box1
+    .sec5-img
+    .sec5-icons
+    span {
+    font-size: 5vw;
+  }
+  .container
+    .what-they-say
+    .sec5-container
+    .sec5-boxs
+    .sec5-box1
+    .sec5-img
+    .sec5-icons
+    i {
+    font-size: 2.5vw;
+  }
+
+  .container .what-they-say .sec5-container .sec5-boxs .sec5-box1 p {
+    font-size: 3.8vw;
+    line-height: 3.5vw;
+  }
+
+  .container .free-and-fast .sec6-container {
+    min-height: 50vw;
+  }
+  .container .free-and-fast .sec6-container .sec6-title span {
+    font-size: 4vw;
+  }
+  .container .free-and-fast .sec6-container .sec6-title h2 {
+    font-size: 4.3vw;
+  }
+  .container .free-and-fast .sec6-container .inputs .input1 label {
+    font-size: 3vw;
+  }
+  .container .free-and-fast .sec6-container .inputs .input1 input {
+    font-size: 2.5vw;
+  }
+  .container .free-and-fast .sec6-container .inputs .input1 textarea {
+    height: 8vw;
+  }
+  .container .free-and-fast .sec6-container .inputs {
+    height: 51vw;
+  }
+}

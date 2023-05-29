@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./food.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- first section start     -->
+      <section class="special-dish" id="sec1">
+        <div class="searchConatiner">
+          <div class="background"></div>
+          <i class="fa-solid fa-xmark"></i>
+  
+          <div class="inpContainer">
+              <input type="text">
+              <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+      </div>
+        <header>
+          <div class="logo">
+            <div>
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <div>
+              <span>Resto</span>
+            </div>
+          </div>
+          <div class="nav">
+            <ul>
+              <a href="#sec1"><li class="active">home</li></a>
+              <a href="#sec2"><li>dishes</li></a>
+              <a href="#sec3"><li>about</li></a>
+              <a href="#sec4"><li>menu</li></a>
+              <a href="#sec5"><li>review</li></a>
+              <a href="#sec6"><li>order</li></a>
+            </ul>
+          </div>
+          <div class="header-icons">
+            <div class="hamburger-icon">
+              <i class="fa-solid fa-bars" id="hamburgerIcon"></i>
+            </div>
+            <div class="header-icon1">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="header-icon2">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="header-icon3">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+          <div class="hamburger-menu">
+            <ul>
+              <i class="fa-solid fa-x"></i>
+              <a href="#sec1"><li>home</li></a>
+              <a href="#sec2"><li>dishes</li></a>
+              <a href="#sec3"><li>about</li></a>
+              <a href="#sec4"><li>menu</li></a>
+              <a href="#sec5"><li>review</li></a>
+              <a href="#sec6"><li>order</li></a>
+            </ul>
+          </div>
+        </header>
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="sec1-text">
+                <span>our special dish</span>
+                <h1>spicy noodles</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  <br />
+                  Voluptas, vero recusandae?
+                </p>
+                <button>order now</button>
+              </div>
+              <div class="sec1-img">
+                <img src="./images/hamburger2.jpg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="sec1-text">
+                <span>our special dish</span>
+                <h1>spicy noodles</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                  Voluptas, vero recusandae?
+                </p>
+                <button>order now</button>
+              </div>
+              <div class="sec1-img">
+                <img src="./images/roasted-chicken.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="sec1-text">
+                <span>our special dish</span>
+                <h1>spicy noodles</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                  Voluptas, vero recusandae?
+                </p>
+                <button>order now</button>
+              </div>
+              <div class="sec1-img">
+                <img src="./images/pizza.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <!-- first section end      -->
+
+      <!-- second section start   -->
+      <section class="popular-dishes" id="sec2">
+        <div class="sec2-container">
+          <span>our dishes</span>
+          <h2>poular dishes</h2>
+          <div class="sec2-boxs">
+            <div class="sec2-box1" id="box-1">
+              <div class="sec2-icons" id="box-1">
+                <div><i class="fa-solid fa-eye"></i></div>
+                <div><i class="fa-solid fa-heart"></i></div>
+              </div>
+              <div class="sec2-img">
+                <img
+                  src="./images/hamburger.jpg"
+                  alt="hamburger-image"
+                  class="sec2-image"
+                />
+              </div>
+              <div class="sec2-text">
+                <h4>tasty food</h4>
+                <div>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                </div>
+                <div class="sec2-btn">
+                  <span>$15.99</span>
+                  <button>add to card</button>
+                </div>
+              </div>
+            </div>
+            <div class="sec2-box1" id="box-2">
+              <div class="sec2-icons" id="box-2">
+                <div><i class="fa-solid fa-eye"></i></div>
+                <div><i class="fa-solid fa-heart"></i></div>
+              </div>
+              <div class="sec2-img">
+                <img
+                  src="./images/chicken.jpg"
+                  alt="chicken-image"
+                  class="sec2-image"
+                />
+              </div>
+              <div class="sec2-text">
+                <h4>tasty food</h4>
+                <div>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                </div>
+                <div class="sec2-btn">
+                  <span>$15.99</span>
+                  <button>add to card</button>
+                </div>
+              </div>
+            </div>
+            <div class="sec2-box1" id="box-3">
+              <div class="sec2-icons" id="box-3">
+                <div><i class="fa-solid fa-eye"></i></div>
+                <div><i class="fa-solid fa-heart"></i></div>
+              </div>
+              <div class="sec2-img">
+                <img
+                  src="./images/roasted-chicken.png"
+                  alt="chicken-image"
+                  class="sec2-image"
+                />
+              </div>
+              <div class="sec2-text">
+                <h4>tasty food</h4>
+                <div>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                </div>
+                <div class="sec2-btn">
+                  <span>$15.99</span>
+                  <button>add to card</button>
+                </div>
+              </div>
+            </div>
+            <div class="sec2-box1" id="box-4">
+              <div class="sec2-icons" id="box-4">
+                <div><i class="fa-solid fa-eye"></i></div>
+                <div><i class="fa-solid fa-heart"></i></div>
+              </div>
+              <div class="sec2-img">
+                <img
+                  src="./images/pizza.jpg"
+                  alt="pizza-image"
+                  class="sec2-image"
+                />
+              </div>
+              <div class="sec2-text">
+                <h4>tasty food</h4>
+                <div>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                </div>
+                <div class="sec2-btn">
+                  <span>$15.99</span>
+                  <button>add to card</button>
+                </div>
+              </div>
+            </div>
+            <div class="sec2-box1" id="box-5">
+              <div class="sec2-icons" id="box-5">
+                <div><i class="fa-solid fa-eye"></i></div>
+                <div><i class="fa-solid fa-heart"></i></div>
+              </div>
+              <div class="sec2-img">
+                <img
+                  src="./images/spagetti2.png"
+                  alt="spagetti-image"
+                  class="sec2-image"
+                />
+              </div>
+              <div class="sec2-text">
+                <h4>tasty food</h4>
+                <div>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                </div>
+                <div class="sec2-btn">
+                  <span>$15.99</span>
+                  <button>add to card</button>
+                </div>
+              </div>
+            </div>
+            <div class="sec2-box1" id="box-6">
+              <div class="sec2-icons" id="box-6">
+                <div><i class="fa-solid fa-eye"></i></div>
+                <div><i class="fa-solid fa-heart"></i></div>
+              </div>
+              <div class="sec2-img">
+                <img
+                  src="./images/cake.webp"
+                  alt="cake-image"
+                  class="sec2-image"
+                />
+              </div>
+              <div class="sec2-text">
+                <h4>tasty food</h4>
+                <div>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                  <i class="fa-sharp fa-solid fa-star"></i>
+                </div>
+                <div class="sec2-btn">
+                  <span>$15.99</span>
+                  <button>add to card</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- second-section end  -->
+
+      <!-- thrid section start     -->
+      <section class="why-choose-us" id="sec3">
+        <div class="sec3-container">
+          <span>about us</span>
+          <h2>why choose us?</h2>
+          <div class="sec3-container2">
+            <div class="sec3-img">
+              <img
+                src="./images/chick-salad.png"
+                alt="chicken-salad"
+                class="sec3-image"
+              />
+            </div>
+            <div class="sec3-text">
+              <h4>best food in the country</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                voluptate aquasi
+                <br />
+                laborum architecto. Nobis voluptatum error tempora in architecto
+                Nobis quasi <br />
+                voluptatum error tempora in architecto<br /><br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                voluptate a quasi
+                <br />
+                laborum architecto. Nobis voluptatum error tempora in architecto
+                voluptate
+              </p>
+              <div class="sec3-btns">
+                <div class="sec3-btn1">
+                  <i class="fa-sharp fa-solid fa-car-side"></i>
+                  <span>free delivery</span>
+                </div>
+                <div class="sec3-btn1">
+                  <i class="fa-solid fa-dollar-sign"></i>
+                  <span>easy payments</span>
+                </div>
+                <div class="sec3-btn1">
+                  <i class="fa-solid fa-headphones"></i>
+                  <span>24/7 services</span>
+                </div>
+              </div>
+              <button>learn more</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--   thrid section end    -->
+
+      <!--  fourth section start     -->
+      <section class="todays-speciality" id="sec4">
+        <div class="sec4-container">
+          <div class="sec4-title">
+            <span>our menu</span>
+            <h2>todays's speciality</h2>
+          </div>
+          <div class="sec4-boxs">
+            <div class="sec4-box1">
+              <div class="sec4-img">
+                <img
+                  src="./images/hamburger2.webp"
+                  alt="hamburger-iamge"
+                  class="sec4-image"
+                />
+                <div class="sec4-icon">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </div>
+              <div class="sec4-icons">
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+              </div>
+              <h4>delicous food</h4>
+              <p>
+                Praesentium ad nesciunt assumenda odio minima vero distinctio
+                laboru
+              </p>
+              <div class="sec4-btn">
+                <button>add to cart</button>
+                <span>$12.99</span>
+              </div>
+            </div>
+            <div class="sec4-box1">
+              <div class="sec4-img">
+                <img
+                  src="./images/pizza2.jpg"
+                  alt="hamburger-image"
+                  class="sec4-image"
+                />
+                <div class="sec4-icon">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </div>
+              <div class="sec4-icons">
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+              </div>
+              <h4>delicous food</h4>
+              <p>
+                Praesentium ad nesciunt assumenda odio minima vero distinctio
+                laboru
+              </p>
+              <div class="sec4-btn">
+                <button>add to cart</button>
+                <span>$12.99</span>
+              </div>
+            </div>
+            <div class="sec4-box1">
+              <div class="sec4-img">
+                <img
+                  src="./images/blini.jpg"
+                  alt="blini-image"
+                  class="sec4-image"
+                />
+                <div class="sec4-icon">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </div>
+              <div class="sec4-icons">
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+              </div>
+              <h4>delicous food</h4>
+              <p>
+                Praesentium ad nesciunt assumenda odio minima vero distinctio
+                laboru
+              </p>
+              <div class="sec4-btn">
+                <button>add to cart</button>
+                <span>$12.99</span>
+              </div>
+            </div>
+            <div class="sec4-box1">
+              <div class="sec4-img">
+                <img
+                  src="./images/cake1.jpg"
+                  alt="cake-image"
+                  class="sec4-image"
+                />
+                <div class="sec4-icon">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </div>
+              <div class="sec4-icons">
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+              </div>
+              <h4>delicous food</h4>
+              <p>
+                Praesentium ad nesciunt assumenda odio minima vero distinctio
+                laboru
+              </p>
+              <div class="sec4-btn">
+                <button>add to cart</button>
+                <span>$12.99</span>
+              </div>
+            </div>
+            <div class="sec4-box1">
+              <div class="sec4-img">
+                <img
+                  src="./images/cake2.jpg"
+                  alt="cake-image"
+                  class="sec4-image"
+                />
+                <div class="sec4-icon">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </div>
+              <div class="sec4-icons">
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+              </div>
+              <h4>delicous food</h4>
+              <p>
+                Praesentium ad nesciunt assumenda odio minima vero distinctio
+                laboru
+              </p>
+              <div class="sec4-btn">
+                <button>add to cart</button>
+                <span>$12.99</span>
+              </div>
+            </div>
+            <div class="sec4-box1">
+              <div class="sec4-img">
+                <img
+                  src="./images/cake3.webp"
+                  alt="cake-image"
+                  class="sec4-image"
+                />
+                <div class="sec4-icon">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </div>
+              <div class="sec4-icons">
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+              </div>
+              <h4>delicous food</h4>
+              <p>
+                Praesentium ad nesciunt assumenda odio minima vero distinctio
+                laboru
+              </p>
+              <div class="sec4-btn">
+                <button>add to cart</button>
+                <span>$12.99</span>
+              </div>
+            </div>
+            <div class="sec4-box1">
+              <div class="sec4-img">
+                <img
+                  src="./images/drink1.jpg"
+                  alt="drink-image"
+                  class="sec4-image"
+                />
+                <div class="sec4-icon">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </div>
+              <div class="sec4-icons">
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+              </div>
+              <h4>delicous food</h4>
+              <p>
+                Praesentium ad nesciunt assumenda odio minima vero distinctio
+                laboru
+              </p>
+              <div class="sec4-btn">
+                <button>add to cart</button>
+                <span>$12.99</span>
+              </div>
+            </div>
+            <div class="sec4-box1">
+              <div class="sec4-img">
+                <img
+                  src="./images/drink2.webp"
+                  alt="drink-image"
+                  class="sec4-image"
+                />
+                <div class="sec4-icon">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </div>
+              <div class="sec4-icons">
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+              </div>
+              <h4>delicous food</h4>
+              <p>
+                Praesentium ad nesciunt assumenda odio minima vero distinctio
+                laboru
+              </p>
+              <div class="sec4-btn">
+                <button>add to cart</button>
+                <span>$12.99</span>
+              </div>
+            </div>
+            <div class="sec4-box1">
+              <div class="sec4-img">
+                <img
+                  src="./images/drink3.jpg"
+                  alt="drink-image"
+                  class="sec4-image"
+                />
+                <div class="sec4-icon">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </div>
+              <div class="sec4-icons">
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+              </div>
+              <h4>delicous food</h4>
+              <p>
+                Praesentium ad nesciunt assumenda odio minima vero distinctio
+                laboru
+              </p>
+              <div class="sec4-btn">
+                <button>add to cart</button>
+                <span>$12.99</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--   fourth section end      -->
+
+      <!--   fifth section start        -->
+      <section class="what-they-say" id="sec5">
+        <div class="sec5-container">
+          <div class="sec5-title">
+            <span>costumers's review</span>
+            <h2>what they say</h2>
+          </div>
+          <div class="sec5-boxs">
+            <div class="sec5-box1">
+              <div class="sec5-img">
+                <img
+                  src="./images/prof1.png"
+                  alt="profile-photo"
+                  class="profile-photo"
+                />
+                <div class="sec5-icons">
+                  <span>john doe</span>
+                  <div>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Optio voluptas doloremque veniam perferendis similique aut
+                  sunt omnis, eveniet illo distinctio officiis libero, quia non.
+                  Earum explicabo dolor commodi sapiente totam?
+                </p>
+              </div>
+            </div>
+            <div class="sec5-box1">
+              <div class="sec5-img">
+                <img
+                  src="./images/prof1.png"
+                  alt="profile-photo"
+                  class="profile-photo"
+                />
+                <div class="sec5-icons">
+                  <span>john doe</span>
+                  <div>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Optio voluptas doloremque veniam perferendis similique aut
+                  sunt omnis, eveniet illo distinctio officiis libero, quia non.
+                  Earum explicabo dolor commodi sapiente totam?
+                </p>
+              </div>
+            </div>
+            <div class="sec5-box1">
+              <div class="sec5-img">
+                <img
+                  src="./images/prof1.png"
+                  alt="profile-photo"
+                  class="profile-photo"
+                />
+                <div class="sec5-icons">
+                  <span>john doe</span>
+                  <div>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Optio voluptas doloremque veniam perferendis similique aut
+                  sunt omnis, eveniet illo distinctio officiis libero, quia non.
+                  Earum explicabo dolor commodi sapiente totam?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--      fifth section end         -->
+
+      <!--    sixth section start       -->
+      <section class="free-and-fast" id="sec6">
+        <div class="sec6-container">
+          <div class="sec6-title">
+            <span>order now</span>
+            <h2>free and fast</h2>
+          </div>
+          <div class="inputs">
+            <div class="input1">
+              <div>
+                <label for="name">your name</label> <br />
+                <input type="text" placeholder="enter your name" id="name" />
+              </div>
+              <div>
+                <label for="food">your order</label> <br />
+                <input type="text" placeholder="enter food name" id="name" />
+              </div>
+              <div>
+                <label for="order">how much</label> <br />
+                <input type="number" placeholder="how many orders" id="name" />
+              </div>
+              <div>
+                <label for="adress">your adress</label> <br />
+                <textarea
+                  name="enter your adress"
+                  id="adress"
+                  cols="32"
+                  rows="8"
+                  placeholder="enter your adress"
+                ></textarea>
+              </div>
+            </div>
+            <div class="input1">
+              <div>
+                <label for="name">your number</label> <br />
+                <input
+                  type="number"
+                  placeholder="enter your number"
+                  id="number"
+                />
+              </div>
+              <div>
+                <label for="food">additional food</label> <br />
+                <input type="text" placeholder="extra with food" id="adtfood" />
+              </div>
+              <div>
+                <label for="order">date and time</label> <br />
+                <input type="date" placeholder="how many orders" id="time" />
+              </div>
+              <div>
+                <label for="adress">your adress</label> <br />
+                <textarea
+                  name="enter your adress"
+                  id="adress"
+                  cols="32"
+                  rows="8"
+                  placeholder="enter your adress"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="./food.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        },
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+  </body>
+</html>
